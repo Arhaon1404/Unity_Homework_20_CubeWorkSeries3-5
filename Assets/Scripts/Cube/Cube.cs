@@ -7,6 +7,8 @@ using UnityEngine;
 public class Cube : MonoBehaviour
 {
     private float _lifeTime;
+    private float _minLifeTime;
+    private float _maxLifeTime;
 
     private Color _originalColor;
     private bool _isColored;
@@ -22,6 +24,12 @@ public class Cube : MonoBehaviour
     {
         _isColored = false;
         _isCoroutineDone = true;
+
+        _minLifeTime = 2;
+        _maxLifeTime = 6;
+
+        _lifeTime = UnityEngine.Random.Range(_minLifeTime, _maxLifeTime);
+
         _renderer = GetComponent<Renderer>();
         _originalColor = _renderer.material.color;
     }
@@ -43,6 +51,7 @@ public class Cube : MonoBehaviour
     public void Refresh()
     {
         _renderer.material.color = _originalColor;
+        _lifeTime = UnityEngine.Random.Range(_minLifeTime, _maxLifeTime);
         _isColored = false;
     }
 
