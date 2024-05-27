@@ -44,7 +44,7 @@ public class Cube : MonoBehaviour
         if (_isCoroutineDone == true)
         {
             _isCoroutineDone = false;
-            _lifeCoroutine = StartCoroutine(Coroutine());
+            _lifeCoroutine = StartCoroutine(PasessLifeTimeCoroutine());
         }
     }
 
@@ -55,7 +55,7 @@ public class Cube : MonoBehaviour
         _isColored = false;
     }
 
-    private IEnumerator Coroutine()
+    private IEnumerator PasessLifeTimeCoroutine()
     {
         SetColor();
 

@@ -293,8 +293,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.060494807, y: 214.8166, z: 1}
-  m_Center: {x: 0.5042299, y: 98.801315, z: 0}
+  m_Size: {x: 0.060494807, y: 311.5756, z: 1}
+  m_Center: {x: 0.5042299, y: 147.18077, z: 0}
 --- !u!1 &132248894
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,8 +381,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1097636, y: 214.8166, z: 0.057922207}
-  m_Center: {x: 0.47878295, y: 98.801315, z: -0.5045465}
+  m_Size: {x: 1.1097636, y: 308.05884, z: 0.057922207}
+  m_Center: {x: 0.47878292, y: 145.4225, z: -0.5045465}
 --- !u!1 &390529345
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,8 +555,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.060494807, y: 214.8166, z: 1}
-  m_Center: {x: 0.5042299, y: 98.801315, z: 0}
+  m_Size: {x: 0.060494807, y: 315.92932, z: 1}
+  m_Center: {x: 0.5042299, y: 149.35773, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,8 +702,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1097636, y: 214.8166, z: 0.057922207}
-  m_Center: {x: 0.47878295, y: 98.801315, z: -0.5045465}
+  m_Size: {x: 1.1097636, y: 299.80222, z: 0.057922207}
+  m_Center: {x: 0.47878292, y: 141.29419, z: -0.5045465}
 --- !u!1 &801077551
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +962,6 @@ GameObject:
   - component: {fileID: 1738055394}
   - component: {fileID: 1738055393}
   - component: {fileID: 1738055397}
-  - component: {fileID: 1738055396}
   m_Layer: 0
   m_Name: Spawn Platform
   m_TagString: Untagged
@@ -1035,22 +1034,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1738055396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738055392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fd1a3319807af440a604560ec2dea6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefab: {fileID: 4847236029973492584, guid: d251a9e185f3df342b5aa2aa4d948d74, type: 3}
-  _spawnObject: {fileID: 1738055392}
-  _poolCapacity: 10
-  _maxPoolCapacity: 100
 --- !u!114 &1738055397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,8 +1046,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29139c68c11550d47bb81f14c1367a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnRate: 0.01
-  _poolCubes: {fileID: 1738055396}
+  _spawnRate: 0.1
+  _prefab: {fileID: 4847236029973492584, guid: d251a9e185f3df342b5aa2aa4d948d74, type: 3}
+  _poolCapacity: 10
+  _maxPoolCapacity: 100
 --- !u!1 &1749618756
 GameObject:
   m_ObjectHideFlags: 0
