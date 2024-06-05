@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Sphere : DisappearObject
+public class BlowingSphere : DisappearObject
 {
     [SerializeField] private float _powerExplosion;
     [SerializeField] private float _radius;
@@ -11,7 +11,7 @@ public class Sphere : DisappearObject
 
     private Color _finalColor;
 
-    public event Action<Sphere> LifeTimeDoned;
+    public event Action<BlowingSphere> LifeTimeDoned;
 
     protected override void Awake()
     {

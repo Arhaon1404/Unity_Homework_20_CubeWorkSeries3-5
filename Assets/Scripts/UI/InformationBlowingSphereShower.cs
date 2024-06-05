@@ -1,5 +1,5 @@
 
-public class InformationSphereShower : InformationShower<Sphere>
+public class InformationBlowingSphereShower : InformationShower<BlowingSphere>
 {
     protected override void ShowInfo()
     {

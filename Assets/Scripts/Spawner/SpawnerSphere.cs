@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
-public class SpawnerSphere : Spawner<Sphere>
+public class SpawnerSphere : Spawner<BlowingSphere>
 {
     [SerializeField] private SpawnerCube _spawnerCube;
 
@@ -21,27 +19,27 @@ public class SpawnerSphere : Spawner<Sphere>
         base.Awake();
     }
 
-    protected override void OnTakeFromPool(Sphere sphere)
+    protected override void OnTakeFromPool(BlowingSphere blowingSphere)
     {
-        sphere.transform.position = SpawnPosition;
-        base.OnTakeFromPool(sphere);
+        blowingSphere.transform.position = SpawnPosition;
+        base.OnTakeFromPool(blowingSphere);
     }
 
     private void CreateSphere(Cube cube)
     {
         SpawnPosition = cube.transform.position;
 
-        Sphere sphere = Pool.Get();
+        BlowingSphere blowingSphere = Pool.Get();
 
-        sphere.StartLifeCycle();
+        blowingSphere.StartLifeCycle();
 
-        sphere.LifeTimeDoned += Release;
+        blowingSphere.LifeTimeDoned += Release;
     }
 
-    private void Release(Sphere sphere)
+    private void Release(BlowingSphere blowingSphere)
     {
-        Pool.Release(sphere);
+        Pool.Release(blowingSphere);
 
-        sphere.LifeTimeDoned -= Release;
+        blowingSphere.LifeTimeDoned -= Release;
     }
 }
