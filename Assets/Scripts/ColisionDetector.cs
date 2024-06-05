@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ColisionDetector : MonoBehaviour
 {
-    [SerializeField] private Spawner _spawner;
+    [SerializeField] private Spawner<Cube> _spawner;
 
     private void OnCollisionEnter(Collision collision)
     {
